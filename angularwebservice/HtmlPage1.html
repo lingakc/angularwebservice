@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/script.js"></script>
+    <link href="Content/style.css" rel="stylesheet" />
+</head>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        {{erroe}}
+        <br /><br />
+        <table>
+
+            <thead>
+                <tr>
+                    <th>
+                        EmployeeId
+                    </th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>DepartmentId</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees">
+                    <td>
+                        {{employee.EmployeeId}}
+                    </td>
+                    <td>
+                        {{employee.Name}}
+                    </td>
+                    <td>
+                        {{employee.Gender}}
+                    </td>
+                    <td>
+                        {{employee.City}}
+                    </td>
+                    <td>
+                        {{employee.DepartmentId}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
